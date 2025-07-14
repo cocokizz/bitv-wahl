@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wahl Group | Analyse Automotive Zielgruppen</title>
+    <title>Wahl Group | Strategie & Analyse 2025</title>
     
     <!-- Google Font Import: Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -197,406 +197,125 @@
             filter: invert(1);
         }
 
-
-        /* --- Cluster Karten --- */
-        .cluster-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 4rem;
-        }
-
-        .cluster-card {
+        /* --- General Card & Grid Styles --- */
+        .card {
             background-color: var(--bg-light);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
             padding: 2rem;
-            text-align: left;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .cluster-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
-        }
-
-        .cluster-card h3 {
-            margin-top: 0;
-            margin-bottom: 0.5rem;
-        }
-
-        .cluster-card p {
-            font-size: 0.9rem;
-            margin-bottom: 1.5rem;
-            max-width: 100%; /* Override for cards */
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 0.8rem 1.8rem;
-            background-color: var(--primary-accent);
-            color: var(--text-primary) !important;
-            border-radius: 5px;
-            font-weight: 600;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn:hover {
-            background-color: #008080;
-            color: var(--text-primary) !important;
-        }
-
-        /* --- Marken Übersicht --- */
-        .brand-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .brand-logo {
-            font-family: 'Poppins', sans-serif;
-            font-weight: 600;
-            font-size: 1.5rem;
-            padding: 1rem;
-            color: var(--text-secondary);
-            transition: all 0.3s ease;
-        }
-
-
-        /* --- Detail Sektionen der Cluster --- */
-        .cluster-detail .cluster-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .cluster-detail .cluster-header p {
-            margin-left: auto;
-            margin-right: auto;
-            font-size: 1.1rem;
-        }
-
-        .persona-section {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 3rem;
-            align-items: flex-start;
-            margin-top: 3rem;
-            background-color: var(--bg-light);
-            padding: 3rem;
             border-radius: 8px;
             border: 1px solid var(--border-color);
         }
-
-        .persona-demographics {
-            background: var(--bg-dark);
-            padding: 2rem;
-            border-radius: 8px;
-            position: sticky;
-            top: 120px; /* Abstand zum Header */
-        }
-        
-        .persona-demographics p {
-            max-width: 100%;
-        }
-
-        .persona-image {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 1.5rem;
-            object-fit: cover;
-        }
-
-        .persona-demographics h4 {
-            margin-top: 1.5rem;
-            color: var(--text-secondary);
-            font-size: 1rem;
-            font-weight: 400;
-        }
-        .persona-demographics span {
-            color: var(--text-primary);
-            font-weight: 600;
-        }
-        .persona-demographics hr {
-            border: none;
-            height: 1px;
-            background-color: var(--border-color);
-            margin: 1.5rem 0;
-        }
-        .persona-demographics .persona-name {
-            color: var(--primary-accent);
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        /* --- Akkordeon für Persona-Details --- */
-        .accordion-item {
-            border-bottom: 1px solid var(--border-color);
-        }
-        .accordion-item:last-child {
-            border-bottom: none;
-        }
-        .accordion-button {
-            width: 100%;
-            background: none;
-            border: none;
-            text-align: left;
-            padding: 1.5rem 0;
-            font-size: 1.2rem;
-            font-family: var(--font-family);
-            font-weight: 600;
-            color: var(--text-primary);
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: color 0.3s;
-        }
-        .accordion-button:hover {
-            color: var(--primary-accent);
-        }
-        .accordion-button::after {
-            content: '+';
-            font-size: 2rem;
-            font-weight: 300;
-            transition: transform 0.3s ease;
-        }
-        .accordion-button.active::after {
-            transform: rotate(45deg);
-        }
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease-out, padding 0.4s ease-out;
-        }
-        .accordion-content-inner {
-            padding-bottom: 1.5rem;
-        }
-         .accordion-content-inner h4 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-top: 1.5rem;
-            margin-bottom: 1rem;
-        }
-        .accordion-content-inner ul {
-            list-style-position: inside;
-            padding-left: 0;
-        }
-        .accordion-content-inner ul li {
-            margin-bottom: 0.5rem;
-        }
-        .example-post {
-            background-color: var(--bg-dark);
-            border-left: 4px solid var(--primary-accent);
-            padding: 1.5rem;
-            border-radius: 0 8px 8px 0;
-            margin-top: 1rem;
-            font-style: italic;
-        }
-        
-        /* Paragraph width override for specific components */
-        .accordion-content-inner p,
-        .touchpoint-container p,
-        .milieu-analysis-text p,
-        .journey-table-row div,
-        .example-post p,
-        .milieu-item p {
-            max-width: 100%;
-        }
-
-        /* Specific override for headers */
-        #customer-journeys .cluster-header p {
-            max-width: 100%;
-        }
-
-
-        /* --- Sinus Milieu Section --- */
-        .milieu-breakdown {
-            margin-top: 3rem;
-        }
-        .milieu-class-group {
-            margin-bottom: 3rem;
-        }
-        .milieu-class-group > h3 {
-            font-size: 1.5rem;
-            color: var(--text-primary);
-            padding-bottom: 1rem;
-            border-bottom: 1px solid var(--border-color);
-        }
-        .milieu-item {
-            background-color: var(--bg-dark);
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-            border-left: 4px solid var(--border-color);
-        }
-        .milieu-item h4 {
-            font-size: 1.2rem;
-            color: var(--primary-accent);
-            margin-bottom: 0.5rem;
-            margin-top: 0;
-        }
-
-        .milieu-map-wrapper {
-            position: relative;
-            max-width: 1000px;
-            margin: 0 auto 3rem auto;
-        }
-
-        .milieu-map-image {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        .milieu-marker {
-            position: absolute;
-            width: 2rem;
-            height: 2rem;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            color: var(--text-primary);
-            background-color: var(--primary-accent);
-            border: 2px solid var(--text-primary);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            font-size: 0.875rem;
-            transform: translate(-50%, -50%);
-        }
-
-        .milieu-legend {
-            background-color: var(--bg-light);
-            padding: 2rem;
-            border-radius: 8px;
-        }
-
-        .milieu-legend h3 {
-            font-size: 1.5rem;
-            margin-top: 0;
-            color: var(--text-primary);
-        }
-
-        .legend-grid {
+        .grid-layout {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1rem 2rem;
+            gap: 2rem;
+            margin-top: 3rem;
         }
 
-        .legend-item {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            color: var(--text-secondary);
+        /* --- Strategy Overview Section --- */
+        .strategy-overview-card h3 {
+            font-size: 1.5rem;
+            margin-top: 0;
         }
-
-        .legend-marker {
-            flex-shrink: 0;
-            width: 1.75rem;
-            height: 1.75rem;
-            background-color: var(--primary-accent);
-            color: var(--text-primary);
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 0.8rem;
+        .strategy-overview-card ol li {
+            list-style-type: none;
+            counter-increment: list-item;
+            padding-left: 2rem;
         }
-        
-        /* --- Customer Journey Section --- */
-        .journey-visual-container {
-            display: flex;
-            justify-content: space-between;
-            text-align: center;
-            margin-bottom: 2rem;
-            padding: 1.5rem 0;
-            border-bottom: 1px solid var(--border-color);
-        }
-        .journey-step {
-            flex: 1;
-            padding: 0 0.5rem;
-        }
-        .journey-icon-circle {
-            width: 80px;
-            height: 80px;
-            border: 2px solid var(--primary-accent);
-            border-radius: 50%;
-            margin: 0 auto 1rem auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary-accent);
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .journey-icon-circle svg {
-            width: 40px;
-            height: 40px;
-            fill: currentColor;
-        }
-        .journey-step:hover .journey-icon-circle {
+        .strategy-overview-card ol li::before {
+            content: counter(list-item);
             background-color: var(--primary-accent);
             color: var(--bg-dark);
+            font-weight: bold;
+            border-radius: 50%;
+            width: 1.5rem;
+            height: 1.5rem;
+            display: inline-block;
+            text-align: center;
+            line-height: 1.5rem;
+            position: absolute;
+            left: 0;
         }
-        .journey-label {
-            font-weight: 600;
-            font-size: 0.9rem;
-            color: var(--text-primary);
-        }
-        .journey-sublabel {
-            font-size: 0.8rem;
-            color: var(--text-secondary);
-        }
-        
-        .journey-table {
+
+        /* --- Audience & Competitor Table --- */
+        .custom-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
             background-color: var(--bg-light);
             border-radius: 8px;
             overflow: hidden;
-            margin-top: 2rem;
             border: 1px solid var(--border-color);
         }
-        .journey-table-header {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            background-color: var(--bg-dark);
+        .custom-table th, .custom-table td {
             padding: 1rem 1.5rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .custom-table th {
+            background-color: var(--bg-dark);
             font-weight: 600;
         }
-        .journey-table-row {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            padding: 1.5rem;
-            border-top: 1px solid var(--border-color);
-        }
-        .journey-phase {
-            font-weight: 600;
-            color: var(--primary-accent);
+        .custom-table tr:last-child td {
+            border-bottom: none;
         }
 
-        /* --- Touchpoint Analysis Section --- */
-        .touchpoint-container {
-            background-color: var(--bg-light);
-            padding: 2.5rem;
+        /* --- SWOT Section --- */
+        .swot-card {
+            padding: 2rem;
             border-radius: 8px;
-            border: 1px solid var(--border-color);
+        }
+        .swot-card h3 {
+            font-size: 1.5rem;
+            margin-top: 0;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid;
+        }
+        .swot-card.strengths { border-left: 5px solid #22c55e; } /* green-500 */
+        .swot-card.weaknesses { border-left: 5px solid #ef4444; } /* red-500 */
+        .swot-card.opportunities { border-left: 5px solid #3b82f6; } /* blue-500 */
+        .swot-card.threats { border-left: 5px solid #f97316; } /* orange-500 */
+        .swot-card.strengths h3 { border-color: #22c55e; }
+        .swot-card.weaknesses h3 { border-color: #ef4444; }
+        .swot-card.opportunities h3 { border-color: #3b82f6; }
+        .swot-card.threats h3 { border-color: #f97316; }
+        .swot-card ul li::before { display: none; }
+        .swot-card ul li { padding-left: 0; }
+
+        /* --- Platform & Content Section --- */
+        .platform-card h3, .content-pillar h3 {
+            margin-top: 0;
+        }
+        .platform-stats {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+        .platform-stats span {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        .content-pillar {
+            border-top: 4px solid var(--primary-accent);
+        }
+        
+        .analysis-card {
+            background-color: var(--bg-light);
+            padding: 2rem;
+            border-radius: 8px;
             margin-bottom: 2rem;
         }
-        .touchpoint-container h3 {
+        .analysis-card h3 {
             color: var(--primary-accent);
             font-size: 1.5rem;
+            margin-top: 0;
         }
-        .touchpoint-container h4 {
+        .analysis-card h4 {
             color: var(--text-primary);
             font-size: 1.1rem;
             margin-top: 1.5rem;
             margin-bottom: 0.5rem;
         }
-
 
         /* --- Scroll Animation --- */
         .reveal {
@@ -618,47 +337,15 @@
         }
 
         /* --- Responsivität --- */
-        @media (max-width: 992px) {
-            h1 { font-size: 2.5rem; }
-            h2 { font-size: 2rem; }
-            #hero h1 { font-size: 2.8rem; }
-            .persona-section {
-                grid-template-columns: 1fr;
-            }
-            .persona-demographics {
-                position: static;
-            }
-            .journey-visual-container {
-                flex-wrap: wrap;
-                gap: 1rem;
-            }
-            .journey-step {
-                flex-basis: 45%;
-            }
-        }
-
         @media (max-width: 768px) {
             section { padding: 4rem 0; }
             .main-header { padding: 1rem; }
             .main-nav { display: none; }
             .container { padding: 0 1.5rem; }
-            .legend-grid {
-                grid-template-columns: 1fr;
-            }
-            .journey-table-header, .journey-table-row {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
-            .journey-step {
-                flex-basis: 100%;
-            }
-            .journey-icon-circle {
-                width: 60px;
-                height: 60px;
-            }
-            .journey-icon-circle svg {
-                width: 30px;
-                height: 30px;
+            .grid-layout { grid-template-columns: 1fr; }
+            .custom-table {
+                display: block;
+                overflow-x: auto;
             }
         }
     </style>
@@ -673,7 +360,7 @@
                 <ul>
                     <li><a href="#strategy">Strategie</a></li>
                     <li><a href="#analysis">Analyse</a></li>
-                    <li><a href="#content-strategy">Content</a></li>
+                    <li><a href="#action-plan">Maßnahmen</a></li>
                 </ul>
             </nav>
         </div>
@@ -684,241 +371,138 @@
         <!-- ======= Hero Section ======= -->
         <section id="hero">
             <div class="container">
-                <h1 class="reveal">Plattform-Analyse & Content-Strategie</h1>
-                <p class="reveal">Eine detaillierte Analyse der Social-Media-Landschaft, unserer Zielgruppen und der strategischen Ausrichtung für die Wahl Group.</p>
+                <h1 class="reveal">Digitale Barrierefreiheit</h1>
+                <p class="reveal">Detaillierte Analyse und strategische Handlungsempfehlungen für die Wahl Group, aus der Perspektive des Marken- und Digitalstrategen.</p>
                 <audio controls class="reveal">
-                    <source src="Plattform-analyse.wav" type="audio/wav">
+                    <source src="bitv.wav" type="audio/wav">
                     Ihr Browser unterstützt das Audio-Element nicht.
                 </audio>
             </div>
         </section>
 
-        <!-- ======= Strategy Overview Section ======= -->
-        <section id="strategy" class="reveal">
+        <!-- ======= Management Summary Section ======= -->
+        <section id="summary" class="reveal">
             <div class="container">
-                <div class="cluster-header">
-                    <h2>Strategische Ausrichtung & Übersicht</h2>
-                    <p>Definition unserer Ziele, Kernbotschaften und was uns als Wahl Group auszeichnet.</p>
+                <div class="text-center">
+                    <h2>Management Summary</h2>
                 </div>
-                <div class="grid-layout" style="grid-template-columns: 2fr 1fr;">
-                    <div class="card">
-                        <h3>Unsere Ziele</h3>
-                        <ul>
-                            <li><strong>Expand reach and visibility:</strong> Die Wahl Group möchte ihre Markenbekanntheit national und regional steigern.</li>
-                            <li><strong>Increase recognition and memorability:</strong> Die Marke soll als Synonym für innovative und zuverlässige Lösungen wahrgenommen werden.</li>
-                            <li><strong>Generate organic social media mentions:</strong> Nutzer:innen sollen die Wahl Group aktiv in ihren Beiträgen erwähnen.</li>
-                            <li><strong>Encourage engagement:</strong> Durch interaktive Formate und Community-Management soll die Interaktion gesteigert werden.</li>
-                            <li><strong>Grow a dedicated group of followers:</strong> Aufbau einer loyalen Community, die regelmäßig interagiert.</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h3>Kernbotschaften</h3>
-                        <ol>
-                            <li>Innovation & Zuverlässigkeit</li>
-                            <li>Kundennähe & Partnerschaft</li>
-                            <li>Expertise & Weiterbildung</li>
-                            <li>Nachhaltigkeit & Verantwortung</li>
-                        </ol>
-                    </div>
+                <div class="card">
+                    <p>Die Wahl Group hat mit der Implementierung einer Accessibility-Erklärung und dem UserWay-Widget auf der Website einen wichtigen und proaktiven ersten Schritt unternommen. Dies signalisiert Problembewusstsein und Handlungsbereitschaft. Die Analyse zeigt jedoch, dass wir uns aktuell in einer reaktiven Phase befinden. Das Ziel muss eine proaktive, tief in unsere digitalen Prozesse integrierte Barrierefreiheits-Strategie sein. Insbesondere auf den Social-Media-Kanälen, unseren direktesten Schnittstellen zu Talenten und Kunden, besteht erhebliches Potenzial, unser Markenversprechen von Qualität und Professionalität durch gelebte Inklusion zu untermauern.</p>
                 </div>
             </div>
         </section>
-        
+
         <!-- ======= Analysis Section ======= -->
         <section id="analysis" class="reveal">
             <div class="container">
-                 <div class="cluster-header">
-                    <h2>Zielgruppen & Wettbewerbsanalyse</h2>
-                    <p>Ein Blick auf unsere Zielgruppen, Kanäle und die unserer Mitbewerber, um Potenziale zu identifizieren.</p>
+                <div class="text-center">
+                    <h2>Detaillierte Analyse</h2>
+                    <p>Eine genaue Betrachtung des Status Quo, der Potenziale und der Hürden für unsere digitalen Kanäle.</p>
                 </div>
-                
-                <table class="custom-table">
-                    <thead>
-                        <tr>
-                            <th>Zielgruppe (Persona)</th>
-                            <th>Wer sind sie?</th>
-                            <th>Warum sie folgen</th>
-                            <th>Inhalte, die sie lieben</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Der Moderne Pragmatiker</strong><br>(Markus Weber)</td>
-                            <td>Praktisch veranlagter Familienvater, preis- & sicherheitsbewusst.</td>
-                            <td>Sucht Vertrauen, regionale Nähe und nützliche Tipps für den Alltag.</td>
-                            <td>Konkrete Service-Angebote, Praxis-Tipps, Vorstellung des lokalen Teams.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Die Premium-Performerin</strong><br>(Dr. Lena Hauser)</td>
-                            <td>Erfolgreiche Geschäftsfrau, status- & qualitätsbewusst, wenig Zeit.</td>
-                            <td>Sucht Exklusivität, Effizienz und Inhalte mit klarem Business-Vorteil.</td>
-                            <td>Tech-Dives, Analysen (z.B. Steuervorteile), Einladungen zu exklusiven Events.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Der Urbane Individualist</strong><br>(Tim Köhler)</td>
-                            <td>Kreativer, digital-nativer Trendsetter, erlebnisorientiert.</td>
-                            <td>Sucht Inspiration, Community-Zugehörigkeit und unterhaltsame Inhalte.</td>
-                            <td>User-Generated Content, Influencer-Kooperationen, unterhaltsame Videos (TikTok/Reels).</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <div class="cluster-header" style="margin-top: 4rem;">
-                    <h3>Wettbewerber im Fokus</h3>
-                </div>
-                <table class="custom-table">
-                     <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Beschreibung</th>
-                            <th>USP</th>
-                            <th>Kanäle & Follower</th>
-                            <th>Avg. ER%</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>haakvort</strong></td>
-                            <td>Mittelständische Autohausgruppe</td>
-                            <td>Technologieführerschaft</td>
-                            <td>Instagram (2.315), Facebook (8.261), YouTube (1.420)</td>
-                            <td>3,2% (IG), 0,16% (FB), 0,95% (YT)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Weller</strong></td>
-                            <td>Innovativer Mittelständler</td>
-                            <td>Nachhaltigkeit, Service</td>
-                            <td>LinkedIn (2.000), YouTube (19.400), Instagram (3.867)</td>
-                            <td>3,91% (LI), 0,5% (YT), 1,6% (IG)</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="grid-layout">
+                <div class="grid-layout" style="grid-template-columns: 1fr 2fr; margin-top: 3rem;">
                     <div class="card">
-                        <h4>Analyse: haakvort</h4>
-                        <p><strong>Learnings:</strong> Starke visuelle Kommunikation und regelmäßige Insights stärken die Markenbindung. Hohe Interaktionsrate durch Experten-Content und Community-Formate.</p>
-                        <p><strong>Unsere Chancen:</strong> Authentische Einblicke in Projekte und das Team. Expertenwissen und Tutorials als Differenzierungsmerkmal.</p>
+                        <h3>Internetauftritt: Stärken</h3>
+                        <ul>
+                            <li><strong>Proaktiver Ansatz:</strong> UserWay Widget und Erklärung signalisieren Handlungsbereitschaft.</li>
+                            <li><strong>Technische Grundlage:</strong> Orientierung am WCAG 2.1 Standard.</li>
+                            <li><strong>Grundlegende Bedienbarkeit:</strong> Tastaturnavigation ist bereits umgesetzt.</li>
+                        </ul>
                     </div>
                     <div class="card">
-                        <h4>Analyse: Weller</h4>
-                        <p><strong>Learnings:</strong> Nachhaltigkeit und Service stehen im Fokus, was für hohe Glaubwürdigkeit sorgt. YouTube als Wissensplattform wird aktiv genutzt.</p>
-                        <p><strong>Unsere Chancen:</strong> Ausbau von Video-Formaten (z.B. Projekt-Insights, Tutorials). Nachhaltigkeit und Kundenservice gezielt kommunizieren.</p>
+                        <h3>Internetauftritt: Hürden & Potenziale</h3>
+                        <ul>
+                            <li><strong>Overlay vs. Nativ:</strong> Das UserWay-Widget ist ein gutes Provisorium, ersetzt aber keine native Barrierefreiheit im Quellcode.</li>
+                            <li><strong>PDF-Dokumente:</strong> Unstrukturierte PDFs (Karriere, Berichte) sind eine der größten Barrieren und schließen Nutzer systematisch aus.</li>
+                            <li><strong>Qualität der Alternativtexte:</strong> Alternativtexte müssen den Zweck und Kontext eines Bildes vermitteln, nicht nur beschreiben.</li>
+                            <li><strong>Barrierefreiheitserklärung:</strong> Eine BITV-konforme Erklärung muss präzise Mängel, Alternativen und einen Zeitplan zur Behebung auflisten.</li>
+                        </ul>
                     </div>
                 </div>
-
-                 <div class="grid-layout swot-grid">
-                    <div class="swot-card strengths">
-                        <h3>Stärken</h3>
-                        <ul>
-                            <li>Klare Zielsetzung und engagiertes Team</li>
-                            <li>Hohe Fachkompetenz und Innovationskraft</li>
-                            <li>Breites Leistungsspektrum und Kundennähe</li>
-                        </ul>
+                 <div class="grid-layout" style="margin-top: 2rem;">
+                    <div class="analysis-card card">
+                        <h3>Analyse der Social-Media-Kanäle</h3>
+                        <p>Unsere Social-Media-Kanäle sind das Gesicht unserer Marke im täglichen Dialog. Inkonsistenz in der Barrierefreiheit hier beschädigt unser Image stärker als auf der statischen Website, da es den direkten Austausch betrifft. Jeder nicht untertitelte Video-Post oder jedes Bild ohne Alternativtext ist eine verpasste Chance, unsere Zielgruppen vollständig zu erreichen und unsere Markenwerte zu kommunizieren.</p>
                     </div>
-                    <div class="swot-card weaknesses">
-                        <h3>Schwächen</h3>
-                        <ul>
-                            <li>Noch geringe Social-Media-Präsenz</li>
-                            <li>USPs müssen noch stärker herausgearbeitet werden</li>
-                            <li>Plattformübergreifende Strategie ausbaufähig</li>
-                        </ul>
+                </div>
+                 <div class="grid-layout" style="grid-template-columns: 1fr 1fr; margin-top: 2rem;">
+                    <div class="card">
+                        <h4>LinkedIn (B2B & Employer Branding)</h4>
+                        <p><strong>Hürde:</strong> Fehlende Alternativtexte bei Bildern und Infografiken sind hier besonders kritisch. Wir positionieren uns als professioneller Arbeitgeber und Partner. Wenn sehbehinderte Fachkräfte unsere Inhalte nicht verstehen können, untergräbt das unsere Glaubwürdigkeit.</p>
+                        <p><strong>Potenzial:</strong> Konsequente Nutzung von Alternativtexten, klaren Bildbeschreibungen und untertitelten Videos wird uns als vorbildlichen Akteur positionieren.</p>
                     </div>
-                    <div class="swot-card opportunities">
-                        <h3>Chancen</h3>
-                        <ul>
-                            <li>Positionierung als Branchenexperte</li>
-                            <li>Ausbau der Community durch interaktive Formate</li>
-                            <li>Nutzung neuer Formate (Shorts, Reels, TikTok)</li>
-                        </ul>
+                     <div class="card">
+                        <h4>TikTok (Nachwuchsgewinnung)</h4>
+                        <p><strong>Hürde:</strong> Schnelle Schnitte, fehlende Untertitel und geringe Kontraste sind Barrieren für eine junge, diverse Zielgruppe.</p>
+                        <p><strong>Potenzial:</strong> Nutzung von TikToks Features (Auto-Untertitel, Text-to-Speech) spricht eine inklusionsbewusste Generation an.</p>
                     </div>
-                    <div class="swot-card threats">
-                        <h3>Risiken</h3>
-                        <ul>
-                            <li>Starke Konkurrenz im digitalen Raum</li>
-                            <li>Gefahr von generischen Inhalten</li>
-                            <li>Schnelle Algorithmus-Änderungen</li>
-                        </ul>
+                     <div class="card">
+                        <h4>Instagram & Facebook (Community)</h4>
+                        <p><strong>Hürde:</strong> Jeder Post ohne Alternativtext ist für einen Teil der Nutzer wertlos. Karussell-Posts benötigen Beschreibungen für jeden Slide.</p>
+                        <p><strong>Potenzial:</strong> Instagram bietet gute Funktionen für Alternativtexte. Videos (Reels/Stories) müssen standardmäßig untertitelt werden.</p>
+                    </div>
+                    <div class="card">
+                        <h4>YouTube (Wissensvermittlung)</h4>
+                        <p><strong>Hürde:</strong> Fehlende oder fehlerhafte Untertitel, mangelhafte Video-Beschreibungen und nicht optimierte Thumbnails.</p>
+                        <p><strong>Potenzial:</strong> Durch manuelle Korrektur von Untertiteln, ausführliche Beschreibungen und barrierefreie Thumbnails wird der Kanal zur inklusiven Wissensplattform.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ======= Content Strategy Section ======= -->
-        <section id="content-strategy" class="reveal">
+        <!-- ======= Action Plan Section ======= -->
+        <section id="action-plan" class="reveal">
             <div class="container">
-                <div class="cluster-header">
-                    <h2>Plattformen & Content-Strategie</h2>
-                    <p>Unsere Inhalte basieren auf vier Kernsäulen, die auf verschiedenen Formaten und für unsere Kernthemen ausgespielt werden.</p>
+                <div class="text-center">
+                    <h2>Strategischer Maßnahmenplan</h2>
+                    <p>Ein Vorgehen in drei Phasen, um Ressourcen effizient einzusetzen und schnelle Erfolge mit langfristigen Verbesserungen zu kombinieren.</p>
                 </div>
-                
-                <div class="grid-layout">
-                    <div class="platform-card card">
-                        <h3>LinkedIn</h3>
-                        <p><strong>Ziel:</strong> Expertenstatus etablieren, B2B-Kontakte, Thought Leadership.</p>
-                        <p><strong>Zielgruppe:</strong> Entscheider:innen (Dr. Hauser), Fachkräfte, Branchenpartner.</p>
-                        <div class="platform-stats">
-                            <div>Abonnenten: <span>1.107</span></div>
-                            <div>Engagement: <span>2,57%</span></div>
-                        </div>
-                    </div>
-                    <div class="platform-card card">
-                        <h3>Instagram</h3>
-                        <p><strong>Ziel:</strong> Markenbekanntheit, Employer Branding, visuelle Projekte & Teamkultur.</p>
-                        <p><strong>Zielgruppe:</strong> Urbane Individualisten (Tim Köhler), Nachwuchs, Fachkräfte.</p>
-                         <div class="platform-stats">
-                            <div>Abonnenten: <span>2.862</span></div>
-                            <div>Engagement: <span>2,79%</span></div>
-                        </div>
-                    </div>
-                    <div class="platform-card card">
-                        <h3>Facebook</h3>
-                        <p><strong>Ziel:</strong> Lokale Community pflegen, Vertrauen schaffen, Service-Angebote.</p>
-                        <p><strong>Zielgruppe:</strong> Moderne Pragmatiker (Markus Weber), regionale Kunden & Fachkräfte.</p>
-                         <div class="platform-stats">
-                            <div>Abonnenten: <span>8.261</span></div>
-                            <div>Engagement: <span>0,16%</span></div>
-                        </div>
-                    </div>
-                    <div class="platform-card card">
-                        <h3>YouTube</h3>
-                        <p><strong>Ziel:</strong> Fachwissen multimedial vermitteln, Vertrauen durch Expertise.</p>
-                        <p><strong>Zielgruppe:</strong> Alle Personas (Fokus auf Fachkräfte & Nachwuchs).</p>
-                         <div class="platform-stats">
-                            <div>Abonnenten: <span>4.770</span></div>
-                            <div>Engagement: <span>1,32%</span></div>
-                        </div>
-                    </div>
-                    <div class="platform-card card">
-                        <h3>TikTok</h3>
-                        <p><strong>Ziel:</strong> Reichweite bei jüngeren Zielgruppen, Employer Branding.</p>
-                        <p><strong>Zielgruppe:</strong> Urbane Individualisten (Tim Köhler), Nachwuchs & junge Talente.</p>
-                         <div class="platform-stats">
-                            <div>Abonnenten: <span>1.941</span></div>
-                            <div>Engagement: <span>8,49%</span></div>
-                        </div>
-                    </div>
-                </div>
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th>Phase</th>
+                            <th>Zeithorizont</th>
+                            <th>Maßnahmen</th>
+                            <th>Ziel</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Phase 1: Quick Wins & Sensibilisierung</strong></td>
+                            <td>Sofort - 3 Monate</td>
+                            <td>1. Interne Schulung für alle Content-Ersteller.<br>2. Verpflichtende Nutzung von Alternativtexten, Untertiteln & #CamelCaseHashtags.<br>3. Prominenten Feedback-Kanal etablieren.</td>
+                            <td>Schnelle Reduzierung der häufigsten Barrieren und Schaffung eines unternehmensweiten Bewusstseins.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Phase 2: Strukturelle Optimierung</strong></td>
+                            <td>3 - 9 Monate</td>
+                            <td>1. Erstellung einer detaillierten, BITV-konformen Barrierefreiheitserklärung.<br>2. Systematische Prüfung und Überarbeitung der wichtigsten PDFs (Stellenanzeigen etc.).<br>3. Beauftragung eines manuellen, expertenbasierten BITV-Tests.</td>
+                            <td>Schließung der strukturellen und juristischen Lücken. Sicherstellung der Barrierefreiheit für kritische Prozesse.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Phase 3: Integration & Exzellenz</strong></td>
+                            <td>Langfristig</td>
+                            <td>1. "Accessibility by Design" als festes Kriterium in allen digitalen Projekten.<br>2. Jährliche Durchführung von manuellen Audits.<br>3. Fokus auf "Einfache Sprache" als festen Bestandteil der Markenstimme.</td>
+                            <td>Barrierefreiheit ist integraler Bestandteil unserer digitalen Qualitätsstandards und unseres Markenversprechens.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
 
-                 <div class="grid-layout" style="margin-top: 3rem;">
-                    <div class="content-pillar card">
-                        <h3>Pillar 1: How-to/Tutorials</h3>
-                        <p><strong>Was:</strong> Praktische Tipps und Anleitungen aus der Praxis, z.B. "So optimieren Sie Ihre Energiekosten."</p>
-                        <p><strong>Warum:</strong> Vermittelt Kompetenz, baut Vertrauen auf und bietet direkten Mehrwert.</p>
-                    </div>
-                    <div class="content-pillar card">
-                        <h3>Pillar 2: Storytelling</h3>
-                        <p><strong>Was:</strong> Erfolgsgeschichten von Kunden und Mitarbeitenden, z.B. "Wie wir gemeinsam mit Kunde X eine innovative Lösung umgesetzt haben."</p>
-                        <p><strong>Warum:</strong> Stärkt die emotionale Bindung und macht die Marke menschlich.</p>
-                    </div>
-                    <div class="content-pillar card">
-                        <h3>Pillar 3: News & Updates</h3>
-                        <p><strong>Was:</strong> Branchennews, Produktneuheiten, Events, z.B. "Neue gesetzliche Anforderungen - das müssen Unternehmen jetzt beachten."</p>
-                        <p><strong>Warum:</strong> Positioniert die Wahl Group als aktuelle und relevante Informationsquelle.</p>
-                    </div>
-                    <div class="content-pillar card">
-                        <h3>Pillar 4: Statements & Diskussionen</h3>
-                        <p><strong>Was:</strong> Meinungen, Standpunkte und Diskussionen zu aktuellen Themen, z. B. "Warum Nachhaltigkeit mehr als ein Trend ist."</p>
-                        <p><strong>Warum:</strong> Regt zur Interaktion an und zeigt Haltung.</p>
+        <!-- ======= Conclusion Section ======= -->
+        <section id="conclusion" class="reveal">
+            <div class="container">
+                <div class="text-center">
+                    <h2>Strategisches Fazit</h2>
+                </div>
+                <div class="card">
+                    <p>Die Wahl Group hat die Reise zur digitalen Barrierefreiheit begonnen. Die vorliegende Detailanalyse zeigt jedoch, dass wir den entscheidenden Schritt von einer reaktiven Haltung (Wir haben ein Tool) zu einer proaktiven, strategischen Positionierung (Wir sind eine barrierefreie Marke) noch vor uns haben.</p>
+                    <p>Die Investition in umfassende Barrierefreiheit ist keine reine Pflichterfüllung, sondern eine strategische Investition in:</p>
+                    <div class="grid-layout">
+                        <div><h4>Markenqualität</h4><p>Wir untermauern unseren Anspruch auf Qualität und Professionalität.</p></div>
+                        <div><h4>Reichweite</h4><p>Wir machen unsere Botschaften für bis zu 15-20% mehr Menschen zugänglich.</p></div>
+                        <div><h4>Employer Branding</h4><p>Wir positionieren uns als moderner, sozial verantwortlicher Arbeitgeber.</p></div>
+                        <div><h4>Zukunftssicherheit</h4><p>Wir erfüllen schon heute die rechtlichen und technischen Anforderungen von morgen.</p></div>
                     </div>
                 </div>
             </div>
@@ -928,7 +512,7 @@
 
     <footer class="main-footer">
         <div class="container">
-            <p>&copy; 2025 Wahl Group | Plattform & Content Strategie</p>
+            <p>&copy; 2025 Wahl Group | Strategie zur digitalen Barrierefreiheit</p>
         </div>
     </footer>
 
